@@ -6,8 +6,9 @@
 
 Thanks to Mike Vaiana [@vaiana](https://github.com/vaiana) for guidance on neural decoding and for insights into the challenges in BCI today.
 
->*Neural Latents Benchmark '21: Evaluating latent variable models of neural population activity*[^nlb]
+Thanks to NLB for the outstanding dataset: 
 
+>*Neural Latents Benchmark '21: Evaluating latent variable models of neural population activity*[^nlb]
 
 [^nlb]: Neural Latents Benchmark '21: Evaluating latent variable models of neural population activity, Felix Pei and Joel Ye and David M. Zoltowski and Anqi Wu and Raeed H. Chowdhury and Hansem Sohn and Joseph E. O’Doherty and Krishna V. Shenoy and Matthew T. Kaufman and Mark Churchland and Mehrdad Jazayeri and Lee E. Miller and Jonathan Pillow and Il Memming Park and Eva L. Dyer and Chethan Pandarinath; ARXIV: https://arxiv.org/abs/2109.04463
 
