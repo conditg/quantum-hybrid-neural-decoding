@@ -1,6 +1,6 @@
 # Quantum Hybrid Neural Decoding
 
-### In this project, the brain signals from a monkey are decoded by an LSTM with Variational Quantum Circuits. These results are compared against a classical LSTM to show that Quantum ML can learn in fewer epochs than the classical benchmark.
+### In this project, the brain signals from a monkey are decoded by an LSTM with Variational Quantum Circuits. These results are compared against a classical LSTM to show that Quantum ML may be able to handle higher learning rates and learn more in initial epochs than the classical benchmark.
 
 # Key Files: 
 
