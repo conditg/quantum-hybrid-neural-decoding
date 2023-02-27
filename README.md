@@ -10,4 +10,6 @@
 
 # Main Results
 
+The faster learning noted below can be attributed to a higher learning rate. When the Classical Model was trained with a comparably high learning rate, the loss was erratic and the model did not consistently converge - examples can be found in the Overview pdf. 
+
 ![Loss plot](images/loss.png)
