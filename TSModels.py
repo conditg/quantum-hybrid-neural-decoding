@@ -4,6 +4,11 @@ from torch.utils.data import Dataset
 import pennylane as qml
 
 class SequenceDataset(Dataset):
+    """
+    A PyTorch Dataset for time series data that will deliver a sequence of data at once - ideal for LSTM
+    Credit to Brian Kent for the original code:
+    https://www.crosstab.io/articles/time-series-pytorch-lstm/
+    """
     def __init__(self, dataframe, target, features, sequence_length=5):
         self.features = features
         self.target = target
@@ -26,6 +31,11 @@ class SequenceDataset(Dataset):
         return x, self.y[i]
 
 class ShallowRegressionLSTM(nn.Module):
+    """
+    A PyTorch LSTM with a single hidden layer and a single output node.
+    Credit to Brian Kent for the original code:
+    https://www.crosstab.io/articles/time-series-pytorch-lstm/
+    """
     def __init__(self, num_sensors, hidden_units):
         super().__init__()
         self.num_sensors = num_sensors  # this is the number of features
@@ -52,6 +62,11 @@ class ShallowRegressionLSTM(nn.Module):
         return out
     
 class QLSTM(nn.Module):
+    """
+    A PyTorch LSTM with variational quantum circuits within the cell. 
+    Credit to Riccardo Di Sipio for the original code:
+    https://github.com/rdisipio/qlstm
+    """
     def __init__(self, 
                 input_size, 
                 hidden_size, 
@@ -107,7 +122,7 @@ class QLSTM(nn.Module):
             for i in range(self.n_qubits):
                 qml.Hadamard(wires=wires_type[i])
                 qml.RY(ry_params[i], wires=wires_type[i])
-                qml.RZ(ry_params[i], wires=wires_type[i])
+                qml.RZ(rz_params[i], wires=wires_type[i])
         
             #Variational block.
             qml.layer(ansatz, self.n_qlayers, weights, wires_type = wires_type)
@@ -192,7 +207,7 @@ class QLSTM(nn.Module):
 class QShallowRegressionLSTM(nn.Module):
     def __init__(self, num_sensors, hidden_units, n_qubits=0, n_qlayers=1):
         super().__init__()
-        self.num_sensors = num_sensors  # this is the number of features
+        self.num_sensors = num_sensors  
         self.hidden_units = hidden_units
         self.num_layers = 1
         
