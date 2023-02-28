@@ -14,7 +14,7 @@ Thanks to NLB for the outstanding dataset:
 
 # Key Files: 
 
-1. High-level Overview of Problem Statement & Findings --> [Quantum-Hybrid-Neural-Decoding-Overview.pdf](https://docs.google.com/presentation/d/1hoGrlTZ9uWxV6_UNjgkVMt5lCf7xixEoYJniV4pD-Ns/edit?usp=sharing)
+1. High-level Overview of Problem Statement & Findings --> [HybridNeuralDecodingOverview.pdf](./HybridNeuralDecodingOverview.pdf) (or for working links, use the Google slides version [here](https://docs.google.com/presentation/d/1hoGrlTZ9uWxV6_UNjgkVMt5lCf7xixEoYJniV4pD-Ns/edit?usp=sharing)).
 2. Main Notebook with walkthrough and visuals --> [Neural-Decoding.ipynb](./Neural-Decoding.ipynb)
 3. Time Series Model Code including the QLSTM Cell --> [TSModels.py](./TSModels.py)
 
